@@ -310,10 +310,12 @@ function tweetrly_auto_tweets_page(){
 							var paused_time = this.times.total_pause_length;
 							
 							var time_left = ( ( last_tweet_time + time_delay + paused_time ) - n );	
-														
+								
+							//If it's time to post a tweet, do that and reset all counters.							
 							if ( time_left < 1000 && !this.state.data.tweeting_complete ){
 								this.times.total_pause_length = 0;
-								this.post_tweets();	
+								this.post_tweets();
+								time_left = <?php echo $time_delay; ?>	
 							}
 																					
 							return time_left;
