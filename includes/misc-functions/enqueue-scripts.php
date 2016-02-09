@@ -45,20 +45,24 @@ function tweetrly_auto_tweets_page(){
 					html{
 						width:100%;
 						height:100%;	
+						background-color:#88c9f9;
 					}
 					body{
 						width:100%;
 						height:100%;
-						margin:0;
 						display:table;
+						margin:0px;
 						background-color:#88c9f9;
 						color:#FFFFFF;
 						text-align:center;
 						font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+						box-sizing:border-box;
 					}
 					#tweetrly_auto_tweets_notifications{
+						padding:20px;
 						display:table-cell;	
 						vertical-align:middle;
+						box-sizing:border-box;
 					}
 					.tweetrly-auto-tweets-notification{
 						position:relative;
