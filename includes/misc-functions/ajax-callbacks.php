@@ -143,7 +143,7 @@ function tweetrly_auto_tweets_ajax_tweet() {
 	//Include the Twitter Library
 	require( TWEETRLY_AUTO_TWEETS_PLUGIN_DIR . 'includes/misc-functions/oauth/twitteroauth.php' );
 	
-	if ( !isset( $_POST['test_mode'] ) && true == false ){			
+	//if ( !isset( $_POST['test_mode'] ) && true == false ){			
 			
 		$consumer_key = mp_core_get_option( 'tweetrly_auto_tweets_settings_general',  'tweetrly_auto_tweets_twitter_consumer_key' );
 		$consumer_secret = mp_core_get_option( 'tweetrly_auto_tweets_settings_general',  'tweetrly_auto_tweets_twitter_consumer_secret' );
@@ -168,7 +168,7 @@ function tweetrly_auto_tweets_ajax_tweet() {
 		//Post the next tweet in the list
 		$twitteroauth->post("statuses/update", array("status" => $status ) );	
 	
-	}
+	//}
 	
 	//Increment the tweet num
 	$response['tweetrly_auto_tweets_tweet_num'] = $response['tweetrly_auto_tweets_tweet_num'] + 1;
