@@ -313,9 +313,12 @@ function tweetrly_auto_tweets_page(){
 								
 							//If it's time to post a tweet, do that and reset all counters.							
 							if ( time_left < 1000 && !this.state.data.tweeting_complete ){
+								
+								this.state.data.tweetrly_auto_tweets_last_tweet_posted_at = this.get_current_time();
+								
 								this.times.total_pause_length = 0;
 								this.post_tweets();
-								time_left = <?php echo $time_delay; ?>	
+								time_left = <?php echo $time_delay; ?>;
 							}
 																					
 							return time_left;
